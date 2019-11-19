@@ -10,7 +10,10 @@ pipeline {
                 script {
                     if (REF != "") {
                         VALUESFILE = sh(returnStdout: true, script:'git show --name-only --pretty=""')
+                        echo "${VALUESFILE}"
+                    
                         LIST = VALUESFILE.split('\n')
+                        echo "${LIST}"
                         def MAP = [:]
                         for(String file in LIST) {
                             MAP.put(file.split('/')[0], "build");
