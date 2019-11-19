@@ -30,10 +30,6 @@ pipeline {
         }
         
     }
-    post {
-        cleanup {
-            deleteDir()
-        }
-    }
+
 }
 
