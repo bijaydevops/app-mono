@@ -1,15 +1,7 @@
 def APPS = []
 pipeline {
     // If you are running jenkins in a container use "agent { docker { image 'docker:18.09.0-git' }}"
-    agent any {
-
-    environment {
-        GITHUB_HOOK_SECRET = "github-webhook-token-app-mono"
-        //DOCKERHUB = credentials('dockerhub-credentials')
-        DOCKERHUB_USR = ""
-        DOCKERHUB_PSW = ""
-    }
-
+    agent any 
     stages {
 
         stage('Find app name to build') {
