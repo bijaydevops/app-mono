@@ -16,10 +16,12 @@ pipeline {
                             MAP.put(file.split('/')[0], "build");
                         }
                         APPS = MAP.keySet()
+                        echo " Iam here"
                         echo "${APPS}"
                     }
                 }
                 echo "Changes in:${VALUESFILE}"
+                echo "I am here" 
                 echo "application to build:${APPS}"
             }
         }
