@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     if (REF != "") {
-                        VALUESFILE = sh(returnStdout: true, script:'git --no-pager diff --name-only HEAD~1 | sort -u | awk 'BEGIN {FS="/"} {print $1}' | uniq')
+                        VALUESFILE = sh(returnStdout: true, script:"git --no-pager diff --name-only HEAD~1 | sort -u | awk 'BEGIN {FS="/"} {print $1}' | uniq")
                         echo "${VALUESFILE}"
                     
                         LIST = VALUESFILE.split('\n')
