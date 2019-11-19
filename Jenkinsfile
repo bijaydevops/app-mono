@@ -1,4 +1,5 @@
 def APPS = []
+def REF = "abcd"
 pipeline {
     // If you are running jenkins in a container use "agent { docker { image 'docker:18.09.0-git' }}"
     agent any 
