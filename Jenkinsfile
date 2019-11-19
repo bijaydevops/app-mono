@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     if (REF != "") {
-                        VALUESFILE = sh(returnStdout: true, script:'git show --name-only --pretty=""')
+                        VALUESFILE = sh(returnStdout: true, script:'git show --pretty="" --name-only')
                         echo "${VALUESFILE}"
                     
                         LIST = VALUESFILE.split('\n')
