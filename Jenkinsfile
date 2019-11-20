@@ -23,7 +23,7 @@ pipeline {
                     }
                 }
                 echo "Changes in:${VALUESFILE}"
-                echo "I am here" 
+                echo "I am here random" 
                 echo "application to build:${APPS}"
             }
         }
