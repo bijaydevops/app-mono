@@ -2,7 +2,7 @@
 FROM drydock/u14nod:prod
 
 # this folder must be created in the base images
-ADD ./_global /root/_global/
+ADD ./_global /root/_globa/
 ADD . /root/api/
 RUN rm -rf /root/api/_global
 
